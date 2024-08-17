@@ -1,0 +1,36 @@
+name: Cypress E2E Tests
+
+on:
+  push:
+    branches:
+      - master
+      - workflow
+  pull_request:
+    branches:
+      - master
+      - workflow
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Start Application
+        run: npm run start &
+
+      - name: Run Cypress tests
+        run: npm run test-e2e-cli
