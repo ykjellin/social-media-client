@@ -16,7 +16,7 @@ describe("Logout Test", () => {
   });
 
   it("should log the user out", () => {
-    cy.get('[data-auth="logout"]').click({ force: true });
+    cy.get('[data-auth="logout"]').click();
 
     cy.window().then((win) => {
       win.localStorage.clear();
