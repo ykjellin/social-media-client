@@ -1,5 +1,5 @@
-[![Automated E2E Testing]
-(https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml/badge.svg)] (https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml)
+[![Cypress E2E Tests](https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml/badge.svg?branch=workflow)](https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml)
+
 [![Automated Unit Testing]
 (https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml/badge.svg)] (https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml)
 
@@ -44,7 +44,7 @@ npm run start
 - Jest tests
 
 ```
-npm test-unit
+npm run test-unit
 ```
 
 - Cypress tests
