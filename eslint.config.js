@@ -1,11 +1,15 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
 import cypressPlugin from "eslint-plugin-cypress";
+import pluginJest from "eslint-plugin-jest";
 
 export default [
   {
     languageOptions: {
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
     },
   },
   pluginJs.configs.recommended,
@@ -34,6 +38,18 @@ export default [
     rules: {
       "no-unused-vars": "off",
       "no-undef": "off",
+    },
+  },
+  {
+    files: ["**/*.test.js"],
+    languageOptions: {
+      globals: { ...globals.jest },
+    },
+    plugins: {
+      jest: pluginJest,
+    },
+    rules: {
+      ...pluginJest.configs.recommended.rules,
     },
   },
 ];
