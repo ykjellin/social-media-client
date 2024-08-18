@@ -12,8 +12,8 @@ describe("Login Tests", () => {
   });
 
   it("should allow a user to log in with valid credentials", function () {
-    cy.get("#loginEmail").type(this.userData.email);
-    cy.get("#loginPassword").type(this.userData.password);
+    cy.get("#loginEmail").type(this.userData.email, { force: true });
+    cy.get("#loginPassword").type(this.userData.password, { force: true });
 
     cy.get('#loginForm button[type="submit"]').click({ force: true });
 

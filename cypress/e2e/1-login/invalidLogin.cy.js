@@ -7,8 +7,8 @@ describe("Invalid Login Tests", () => {
   });
 
   it("should not allow login with an invalid email format", () => {
-    cy.get("#loginEmail").type("invalidEmail");
-    cy.get("#loginPassword").type("validPassword");
+    cy.get("#loginEmail").type("invalidEmail", { force: true });
+    cy.get("#loginPassword").type("validPassword", { force: true });
 
     cy.get('#loginForm button[type="submit"]').click({ force: true });
 
@@ -16,8 +16,8 @@ describe("Invalid Login Tests", () => {
   });
 
   it("should not allow login with an incorrect email", function () {
-    cy.get("#loginEmail").type(this.invalidUserData.email);
-    cy.get("#loginPassword").type("validPassword");
+    cy.get("#loginEmail").type(this.invalidUserData.email, { force: true });
+    cy.get("#loginPassword").type("validPassword", { force: true });
 
     cy.get('#loginForm button[type="submit"]').click({ force: true });
 
@@ -25,8 +25,10 @@ describe("Invalid Login Tests", () => {
   });
 
   it("should not allow login with an incorrect password", function () {
-    cy.get("#loginEmail").type("validEmail@noroff.no");
-    cy.get("#loginPassword").type(this.invalidUserData.password);
+    cy.get("#loginEmail").type("validEmail@noroff.no", { force: true });
+    cy.get("#loginPassword").type(this.invalidUserData.password, {
+      force: true,
+    });
 
     cy.get('#loginForm button[type="submit"]').click({ force: true });
 
