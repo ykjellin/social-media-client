@@ -12,11 +12,12 @@ on:
 
 jobs:
   cypress-run:
+    name: Run E2E Tests
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout under $GITHUB_WORKSPACE
+        uses: actions/checkout@main
 
       - name: Run Cypress tests
         uses: cypress-io/github-action@v4
