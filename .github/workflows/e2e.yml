@@ -31,9 +31,13 @@ jobs:
 
       - name: Start Application
         run: npm run start &
+        env:
+          PORT: 8080
 
       - name: Wait for Application to be ready
         run: npx wait-on http://localhost:8080
 
       - name: Run Cypress tests
-        run: npm run test-e2e-cli
+        uses: cypress-io/github-action@v6
+        with:
+          browser: electron
