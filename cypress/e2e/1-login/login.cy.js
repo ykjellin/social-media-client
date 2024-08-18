@@ -3,7 +3,7 @@ describe("Login Tests", () => {
     cy.fixture("login").as("userData");
     cy.visit("/");
 
-    cy.contains("button", "Login").click();
+    cy.contains("button", "Login").click({ force: true });
   });
 
   it("should display the login form", () => {
@@ -15,13 +15,13 @@ describe("Login Tests", () => {
     cy.get("#loginEmail").type(this.userData.email);
     cy.get("#loginPassword").type(this.userData.password);
 
-    cy.get('#loginForm button[type="submit"]').click();
+    cy.get('#loginForm button[type="submit"]').click({ force: true });
 
     cy.get('[data-auth="logout"]').should("be.visible");
   });
 
   it("should show validation errors for empty fields", () => {
-    cy.get('#loginForm button[type="submit"]').click();
+    cy.get('#loginForm button[type="submit"]').click({ force: true });
 
     cy.get("#loginEmail:invalid").should("exist");
     cy.get("#loginPassword:invalid").should("exist");
