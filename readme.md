@@ -1,3 +1,8 @@
+[![Automated E2E Testing]
+(https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml/badge.svg)] (https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml)
+[![Automated Unit Testing]
+(https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml/badge.svg)] (https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml)
+
 # Workflow Course Assignment
 
 This is my course assignment for the Workflow module.
