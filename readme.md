@@ -1,7 +1,6 @@
 [![Cypress E2E Tests](https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml/badge.svg?branch=workflow)](https://github.com/ykjellin/social-media-client/actions/workflows/e2e.yml)
 
-[![Automated Unit Testing]
-(https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml/badge.svg)] (https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml)
+[![Run Unit Tests](https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/ykjellin/social-media-client/actions/workflows/unit-tests.yml)
 
 # Workflow Course Assignment
 
